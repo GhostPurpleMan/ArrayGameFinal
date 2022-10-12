@@ -1,0 +1,26 @@
+#pragma once
+#include "Player.h"
+#include "level.h"
+
+class Game
+{
+	Player m_player;
+	Level m_level;
+	bool m_isGameOver;
+
+public:
+	Game();
+	~Game();
+
+
+	bool Load();
+	void Run();
+	//void Unload();
+
+
+	bool IsGameOver();
+
+private:
+	bool Update();
+	void Draw();
+};
